@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Currency Coins</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="jquery-3.6.0.js"></script>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="parallax">
+      <h1>Crypto Currency Coins</h1>
+
+      <!-- The links act as buttons -->
+      <a
+        href="javascript:void(0)"
+        id="homeSectionButton"
+        data-section="homeSection"
+        >Home</a
+      >
+
+      <a
+        href="javascript:void(0)"
+        id="reportSectionButton"
+        data-section="reportSection"
+        >Live Report</a
+      >
+
+      <a href="javascript:void(0)" id="aboutSectionButton" data-section="aboutSection">About</a>
+    </div>
+
+    <section id="homeSection">
+      <hr />
+      <label>Search Coin: </label>
+      <input type="search" />
+      <hr />
+
+      <div class="progress" id="progressBar">
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          role="progressbar"
+          aria-valuenow="0"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 0%"
+        ></div>
+      </div>
+
+      <div id="homeDiv"></div>
+    </section>
+
+    <section id="reportSection">
+      <div id="noCoinsDiv">
+        You Must Choose At Least One Coin For The Graph to Generate
+      </div>
+
+      <div id="loader"></div>
+
+      <div id="chartContainer" style="height: 500px; width: 100%"></div>
+      <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+      <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    </section>
+
+    <section id="aboutSection">
+      <div class="about-section">
+        <h1>About Me</h1>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="picDiv">
+            <h2>Basics</h2>
+            <img src=assets/Images/1656666237745.jpeg style="width: 45%" />
+            <div class="container">
+              <p class="title">Mikka Radzewsky</p>
+              <p>Born: 13th of October, 1998</p>
+              <p>Professional Singer</p>
+              <p>Learning to Be A Full-Stack Developer</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="picDiv">
+            <div class="container">
+              <h2 class="title">Contact Me</h2>
+              <br /><br />
+              <p>0545410169</p>
+              <p>Mikka1999@gmail.com</p>
+              <br />
+              <p>
+                (No, it's not a mistake - my birth year is 98, and the email
+                says 99 :)
+              </p>
+              <p>
+                <button
+                  class="button"
+                  onclick="document.location=`https://www.linkedin.com/in/mikka-radzewsky-9a7716238/`"
+                >
+                  My LinkdIn
+                </button>
+                <br>
+                (This will take you to another site...)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="picDiv">
+            <div class="container">
+              <h2>More About Me</h2>
+              <br />
+              <p class="title">Music</p>
+              <p>I was an "Outstanding Musician" for 2 years in the army.</p>
+              <p>
+                I studied 3 years in the academic joint "Shtriker - New School"
+                program for jazz.
+              </p>
+              <br />
+              <p class="title">Coding</p>
+              <p>
+                I am currently studying at "John Bryce" and will be open to work
+                offers in the coming months.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModalSpan">&times;</span>
+        <div>You can only choose five - select no more and no less.</div>
+        <div id="innerModalDiv"></div>
+      </div>
+    </div>
+  </body>
+</html>

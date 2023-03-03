@@ -1,0 +1,372 @@
+.parallax {
+  /* The image used */
+  background-image: url("https://mediacloud.kiplinger.com/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1633530120/Investing/forex-cryptocurrency.jpg");
+
+  /* Set a specific height */
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+body {
+  text-align: center;
+  font-family: monospace;
+  background-color: #0f0b52;
+}
+.card {
+  width: 155px;
+  height: 180px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+
+h1 {
+  font-size: 70px;
+  font-weight: 600;
+  color: #cce0ed;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #3a7dc4, 1px 2px 0px #3685be, 1px 3px 0px #4486c3,
+    1px 4px 0px #3684d7, 1px 5px 0px #3d83c5, 1px 6px 0px #2c89e6,
+    1px 10px 5px rgba(16, 16, 16, 0.5), 1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3), 1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+a {
+
+    margin-top: 30%;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #82c8e1;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  border: 3px solid rgb(255, 255, 255);
+  background-color: #3636be;
+  margin: 5px;
+  font-size: x-large;
+}
+a:hover {
+  box-shadow: inset 140px 0 0 0 #54b3d6;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(53, 168, 230);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(3, 55, 212);
+}
+
+label {
+  color: #f1f1f1;
+}
+
+input {
+  color: #0f0b52;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.progress {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: rgb(0, 0, 0);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(39, 157, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  color: rgb(172, 1, 1);
+}
+.loading {
+  margin: auto;
+  padding: 20%;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#chartContainer {
+  height: 100%;
+  width: 100%;
+}
+
+#noCoinsDiv, .noCoinsFoundDiv {
+font-size: xx-large;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px black;
+  background-image: linear-gradient(
+    45deg,
+    rgb(15, 71, 117),
+    rgb(58, 169, 188)
+  );
+}
+
+
+#aboutSection{
+    box-sizing: border-box;
+}
+
+.column {
+    width: 33.3%;
+    display: flex;
+  }
+  
+  .picDiv{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: azure;
+  }
+  
+  .about-section {
+    text-align: center;
+    background-color: #043457;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .title {
+    color: rgb(19, 97, 199);
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    margin: 3px;
+  }
+  
+  .button:hover {
+    background-color: rgb(49, 142, 185);
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  img{
+    border-radius: 50%;
+  }
+
+
+
+  #loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+ 
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+  
+.parallax > h1 {
+    font-size: calc(10px + 10vh);
+    line-height: calc(10px + 12vh);
+    text-shadow: 0 0 5px #00d9ff, 0 0 20px #00d5ff, 0 0 40px #00fffb, 0 0 60px #00d5ff, 0 0 10px #00eaff, 0 0 98px #ff0000;
+      color: #a9f1ff;
+    text-align: center;
+    animation: blink 9s infinite;
+    -webkit-animation: blink 9s infinite;
+
+  }
+  
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+
+        text-shadow: 0 0 5px #00d9ff, 0 0 20px #00d5ff, 0 0 40px #00fffb, 0 0 60px #00d5ff, 0 0 10px #00eaff, 0 0 98px #ff0000;
+        color: #a9f1ff;
+    }
+  }
+  
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+  
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+    text-shadow: 0 0 5px #00d9ff, 0 0 20px #00d5ff, 0 0 40px #00fffb, 0 0 60px #00d5ff, 0 0 10px #00eaff, 0 0 98px #ff0000;
+      color: #a9f1ff;
+    }
+  }
+  
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
